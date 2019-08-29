@@ -1,0 +1,19 @@
+.carinfo_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .carinfo_wrap > .car_location {
+    width: 95%; }
+  .carinfo_wrap > .calendar {
+    width: 95%;
+    margin-top: 10px;
+    margin-right: 0;
+    padding: 0; }

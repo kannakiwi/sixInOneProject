@@ -1,0 +1,67 @@
+.main_show {
+  > .container {
+    overflow: hidden;
+    padding-top: 200px;
+    @include media(lg) {
+      padding-top: 300px;
+    }
+    .main {
+      // 中間的派
+      &_pieshow {
+        display: flex;
+        justify-content: center;
+        z-index: 2;
+      }
+      // 三隻鬼全部區域
+      &_groupghost {
+        display: flex;
+        border: 1px solid #000;
+        position: relative;
+      }
+      // 第一隻鬼
+      &_ghost_one {
+        position: absolute;
+        transform: rotate(-10deg) translateY(-70%) translateX(10%);
+        z-index: -1;
+        // border: 1px solid #000;
+        @include media(lg) {
+          left: 25%;
+        }
+        > img {
+          width: 40%;
+          @include media(lg) {
+            width: 60%;
+          }
+        }
+      }
+      // 第二隻鬼
+      &_ghost_two {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%) translateY(-80%);
+        // border: 1px solid #000;
+        z-index: -1;
+        > img {
+          width: 100%;
+        }
+      }
+      // 第三隻鬼
+      &_ghost_three {
+        position: absolute;
+        right: 0;
+        // border: 1px solid #000;
+        transform: rotate(20deg) translateY(-70%) translateX(20%);
+        z-index: -1;
+        @include media(lg) {
+          right: 30%;
+        }
+        > img {
+          width: 50%;
+          @include media(lg) {
+            width: 70%;
+          }
+        }
+      }
+    }
+  }
+}

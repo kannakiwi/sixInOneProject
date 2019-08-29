@@ -1,0 +1,16 @@
+body{
+    background-image: url('../img/product/same_bg.png');
+}
+div[class $= _titlebox]{
+    background-image: url('../img/product/title.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    border: 1px solid #000;
+    @include flex-cen-cen;
+    height: 270px;
+
+    >[class $= _title]{
+        padding-top: 60px;
+    }
+}

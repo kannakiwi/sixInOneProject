@@ -1,0 +1,178 @@
+.layout {
+  > .container {
+  }
+  &_header {
+    background-image: url('../img/layout/nav.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    @include media(md) {
+      background-size: 250%;
+    }
+    > .container {
+      padding-bottom: 20px;
+      @include media(md) {
+        padding-top: 20px;
+        padding-bottom: 50px;
+      }
+    }
+  }
+  &_nav {
+    @include media(md) {
+      position: fixed;
+      top: 0;
+      height: 100%;
+      left: -120%;
+      background-color: #555;
+      transition: 0.5s;
+      z-index: 99;
+    }
+  }
+  &_logo {
+    width: 200px;
+    @include media(md) {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 300px;
+      transform: translateX(-50%);
+    }
+    > .logo {
+      // border: 1px solid #000;
+      text-align: center;
+      > .logo_link {
+        display: inline-block;
+        background-image: url('../img/layout/logo.svg');
+        //少一個png
+        background-size: contain;
+        background-position: center;
+        width: 160px;
+        height: 100px;
+        text-indent: 101%;
+        overflow: hidden;
+        white-space: nowrap;
+        @include media(md) {
+          width: 250px;
+          height: 150px;
+        }
+      }
+    }
+  }
+  &_items {
+    @include flex-around;
+    flex-wrap: wrap;
+    @include media(md) {
+      padding-top: 150px;
+    }
+  }
+  &_itemlink {
+    width: 13%;
+
+    text-align: center;
+    @include media(md) {
+      border: 1px solid rgba(#ffffff, 0.7);
+      width: 95%;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      border-radius: 10px;
+      &:hover {
+        background-color: map-get($color, title_color);
+      }
+    }
+    > .layout_link {
+      display: inline-block;
+      padding: 20px;
+      color: rgba(#ffffff, 0.7);
+    }
+  }
+  &_menubtn {
+    display: none;
+    @include media(md) {
+      display: block;
+      width: 50px;
+      height: 50px;
+      margin: 20px;
+      // position: absolute;
+      position: fixed;
+      top: -1vh;
+      left: 0.5vh;
+      cursor: pointer;
+      transition: 0.5s;
+      &::after,
+      &::before {
+        transform-origin: center;
+        display: block;
+        content: '';
+        width: 100%;
+        height: 5px;
+        background-color: #333;
+        transition: 0.5s;
+      }
+    }
+  }
+  &_menubtn-in {
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: #333;
+    font-size: 0;
+    margin: 10px 0;
+    transition: 0.5s;
+  }
+}
+.menu {
+  @include media(md) {
+    > .layout_menubtn {
+      transform: rotate(180deg);
+      &::before {
+        transform: translate(0, 15px) rotate(-45deg);
+      }
+      &::after {
+        transform: translate(0, -15px) rotate(45deg);
+      }
+      > span {
+        opacity: 0;
+      }
+    }
+  }
+}
+.layout_nav.menu {
+  left: 0;
+  > .layout_menubtn {
+    left: 0;
+    border: 1px solid #000;
+  }
+}
+
+.layout_footer {
+  background-image: url('../img/layout/footer.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  @include media(md) {
+    background-size: 150%;
+  }
+
+  > .container {
+    padding-top: 100px;
+    padding-bottom: 150px;
+    @include media(md) {
+      padding-top: 30px;
+      padding-bottom: 150px;
+    }
+    @at-root .layout_footericons {
+      position: absolute;
+      // border: 1px solid #000;
+      top: 70%;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 40px;
+      color: #fff;
+      @include media(md) {
+        position: absolute;
+        left: 50%;
+        top: 70%;
+        transform: translateX(-50%) translateY(-50%);
+      }
+    }
+  }
+}

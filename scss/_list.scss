@@ -1,0 +1,129 @@
+.filter_group {
+    width: 100%;
+    padding: 30px;
+    @include media(lg) {
+        background-image: url('../img/prod/filter_bg.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center 70px;
+        width: 19%;
+        padding-top: 120px;
+        margin-left: 10px;
+    }
+    >.filter_popular {
+        display: inline-block;
+        margin: auto 20px;
+        @include media(lg) {
+            width: 100%;
+            margin: auto;
+            text-align: center;
+            display: block;
+            padding-top: 20px;
+            padding-bottom: 50px;
+        }
+        >#popular_item {
+            appearance: none;
+            width: 110px;
+            color: #fff;
+            font-weight: 700;
+            background-color: map-get($color, main_bg_color);
+            background-image: url('../img/prod/arrow.png');
+            background-repeat: no-repeat;
+            background-position: 83px center;
+            border-radius: 5px;
+            padding: 5px 20px 5px 10px;
+            box-sizing: border-box;
+        }
+    }
+    >.filter_scope {
+        text-align: center;
+        padding: 5px 0;
+        display: inline-block;
+        // margin: auto;
+        >label {
+            text-align: left;
+            //  margin: 5px auto 10px 20px;
+            font-weight: 700;
+            color: map-get($color, footer_bg_color);
+            font-size: 18px;
+            @include media(lg) {
+                width: 100%;
+                margin: auto 0;
+                display: block;
+                padding-top: 20px;
+                padding-bottom: 15px;
+            }
+        }
+        >input {
+            border-radius: 3px;
+        }
+        >.confirm {
+            appearance: none;
+            color: #fff;
+            font-weight: 700;
+            background-color: map-get($color, main_bg_color);
+        }
+    }
+    >.filter_flavor,
+    >.filter_base,
+    >.filter_ingredient,
+    >.filter_deco {
+        padding-top: 10px;
+        display: flex;
+        // border:solid 1px red;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        border-bottom: solid 1px #fff;
+        min-width: 30%;
+        @include media(lg) {
+            display: block;
+            border-bottom: none;
+        }
+        // margin: 5px 20px;
+        >.filter_title {
+            // border:solid 1px red;
+            width: 30%;
+            text-align: center;
+            align-self: center;
+            font-weight: 700;
+            font-size: 18px;
+            color: map-get($color, footer_bg_color);
+            @include media(lg) {
+                width: 100%;
+                text-align: left;
+                padding: 10px 0;
+            }
+        }
+        >.boxes {
+            display: flex;
+            width: 70%;
+            flex-wrap: wrap;
+            justify-content: center;
+            // border:solid 1px red;
+            @include media(lg) {
+                display: block;
+                width: 100%;
+            }
+            >p {
+                width: 33.33333%;
+                @include media(lg) {
+                    width: 100%;
+                }
+                input {
+                    width: 20px;
+                    height: 20px;
+                    border: solid 1px #000;
+                    @include media(lg) {
+                        width: 34%;
+                        align-self: center;
+                    }
+                }
+                label {
+                    width: 35%;
+                    height: 20px;
+                    align-self: center;
+                }
+            }
+        }
+    }
+}

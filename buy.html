@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/js/all.js"></script>
+  <script src="js/main.js"></script>
+  <title>團購頁面</title>
+  <link rel="stylesheet" href="style/index.css">
+</head>
+
+<body>
+  <!-- 共用layoutheader -->
+  <header class="menu layout_header">
+    <div class="container">
+      <nav class="layout_nav">
+        <button class="layout_menubtn">
+          <span class="layout_menubtn-in">menu</span>
+        </button>
+        <ul class="layout_items">
+          <li class="layout_itemlink">
+            <a class="layout_link" href="javascripts:;">客制派</a>
+          </li>
+          <li class="layout_itemlink">
+            <a class="layout_link" href="prod.html">派對商品</a>
+          </li>
+          <li class="layout_logo">
+            <h1 class="logo">
+              <a class="logo_link" href="index.html">派對</a>
+            </h1>
+          </li>
+          <li class="layout_itemlink">
+            <a class="layout_link" href="buy.html">派對團購</a>
+          </li>
+          <li class="layout_itemlink">
+            <a class="layout_link" href="cars.html">派對活動</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- 共用layoutheader -->
+  <section class="directions">
+    <div class="container">
+      <div class="directions_titlebox">
+        <h2 class="directions_title">團購說明</h2>
+      </div>
+      <div class="directions_list">
+        <div class="directions_card">
+          <div class="directions_img">
+            <img src="img/product/RedCard.png" alt="">
+          </div>
+          <div class="directions_textbox">
+            <div class="directions_title">
+              <p>團購人數</p>
+            </div>
+            <div class="directions_text">
+              <div class="count">
+                <img src="img/product/RedThree_count.png" alt="">
+                <img src="img/product/RedZero_count.png" alt="">
+              </div>
+            </div>
+            <div class="directions_discount">
+              <img src="img/product/RedFive_percent.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="directions_card">
+          <div class="directions_img">
+            <img src="img/product/GreenCard.png" alt="">
+          </div>
+          <div class="directions_textbox">
+            <div class="directions_title">
+              <p>團購人數</p>
+            </div>
+            <div class="directions_text">
+              <div class="count">
+                <img src="img/product/GreenTwo_count.png" alt="">
+                <img src="img/product/GreenZero_count.png" alt="">
+              </div>
+            </div>
+            <div class="directions_discount">
+              <img src="img/product/GreenEight_percent.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="directions_card">
+          <div class="directions_img">
+            <img src="img/product/BlueCard.png" alt="">
+          </div>
+          <div class="directions_textbox">
+            <div class="directions_title">
+              <p>團購人數</p>
+            </div>
+            <div class="directions_text">
+              <div class="count">
+                <img src="img/product/BlueOne_count.png" alt="">
+                <img src="img/product/BlueZero_count.png" alt="">
+              </div>
+            </div>
+            <div class="directions_discount">
+              <img src="img/product/BlueNine_percent.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="products">
+    <div class="container">
+      <div class="products_titlebox">
+        <h2 class="products_title">揪團買商品</h2>
+      </div>
+      <div class="products_list">
+        <div class="products_filter">
+          <div class="products_filterBg">
+            <img id="filter_bg_lg" src="img/product/Filter.png" alt="">
+            <img id="filter_bg_md" src="img/product/Filter_RWD.png" alt="">
+          </div>
+          <div class="products_filterBar">
+            <div class="products_filterOrder">
+              <select name="filterOrder" id="filterOrder">
+                <option value="">熱門商品</option>
+              </select>
+            </div>
+            <div class="taste">
+              <div class="taste_title">
+                <h3>口味</h3>
+              </div>
+              <div class="products_filterList">
+                <div class="products_filter_row">
+                  <div class="products_filterOption">
+                    <input type="checkbox" name="" id="taste_sweet"><label for="taste_sweet">甜蜜蜜</label>
+                  </div>
+                  <div class="products_filterOption">
+                    <input type="checkbox" name="" id="taste_health"><label for="taste_health">養生</label>
+                  </div>
+                  <div class="products_filterOption">
+                    <input type="checkbox" name="" id="taste_salty"><label for="taste_salty">鹹派</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="base">
+              <div class="base_title">
+                <h3>基底</h3>
+              </div>
+              <div class="products_filterList">
+                <div class="products_filter_row">
+                  <div class="products_filterOption">
+                    <input type="checkbox" name="" id="base_bamboo"><label for="base_bamboo">竹炭</label>
+                  </div>
+                  <div class="products_filterOption">
+                    <input type="checkbox" name="" id="base_matcha"><label for="base_matcha">抹茶</label>
+                  </div>
+                  <div class="products_filterOption">
+                    <input type="checkbox" name="" id="base_pumpkin"><label for="base_pumpkin">南瓜</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="stuff">
+              <div class="stuff_title">
+                <h3>配料</h3>
+              </div>
+              <div class="products_filterList">
+                <div class="products_filter_row">
+                  <div class="products_filterOption">
+                    <input type="checkbox" name="" id="stuff_almond"><label for="stuff_almond">杏仁</label>
+                  </div>
+                  <div class="products_filterOption">
+                    <input type="checkbox" name="" id="stuff_yolk"><label for="stuff_yolk">蛋黃</label>
+                  </div>
+                  <div class="products_filterOption">
+                    <input type="checkbox" name="" id="stuff_redbeans"><label for="stuff_redbeans">紅豆</label>
+                  </div>
+                </div>
+                <div class="products_filter_row">
+                  <div class="products_filterOption">
+                    <input type="checkbox" name="" id="stuff_pineapple"><label for="stuff_pineapple">鳳梨</label>
+                  </div>
+                  <div class="products_filterOption">
+                    <input type="checkbox" name="" id="stuff_onion"><label for="stuff_onion">蔥花</label>
+                  </div>
+                  <div class="products_filterOption">
+                    <input type="checkbox" name="" id="stuff_ham"><label for="stuff_ham">火腿</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="decoration">
+              <div class="decoration_title">
+                <h3>裝飾品</h3>
+              </div>
+              <div class="products_filterList">
+                <div class="products_filter_row">
+                  <div class="products_filterOption">
+                    <input type="checkbox" name="" id="decoration_umbrella"><label for="decoration_umbrella">雨傘</label>
+                  </div>
+                  <div class="products_filterOption">
+                    <input type="checkbox" name="" id="decoration_cross"><label for="decoration_cross">十字架</label>
+                  </div>
+                  <div class="products_filterOption">
+                    <input type="checkbox" name="" id="decoration_eyeball"><label for="decoration_eyeball">眼球</label>
+                  </div>
+                </div>
+                <div class="products_filter_row">
+                  <div class="products_filterOption">
+                    <input type="checkbox" name="" id="decoration_fingerbiscuit">
+                    <label for="decoration_fingerbiscuit">手指餅乾</label>
+                  </div>
+                  <div class="products_filterOption">
+                    <input type="checkbox" name="" id="decoration_witchbroom">
+                    <label for="decoration_witchbroom">魔女掃帚</label>
+                  </div>
+                  <div class="products_filterOption">
+                    <input type="checkbox" name="" id="decoration_goldpaper">
+                    <label for="decoration_goldpaper">金紙</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="products_cardList">
+          <div class="products_row">
+            <div class="products_card">
+              <div class="products_offerLevel">
+                <img src="img/product/BlueCard_Level.png" alt="">
+              </div>
+              <div class="products_detail">
+                <div class="products_P">
+                  <div class="products_Pname">
+                    <p>商品名稱</p>
+                  </div>
+                  <div class="products_Ptag">
+                    <p>客製</p>
+                  </div>
+                </div>
+                <div class="products_content">
+                  <div class="products_img">
+                    <img src="img/product/product.png" alt="">
+                  </div>
+                  <div class="products_information">
+                    <p>成分</p>
+                    <p><span>基底:</span><span>竹炭</span></p>
+                    <p><span>配料:</span><span>蔥花、火腿</span></p>
+                    <p><span>裝飾品:</span><span>眼球、手指餅乾</span></p>
+                  </div>
+                </div>
+                <div class="products_statusbox">
+                  <div class="products_status">
+                    <p>目前人數</p>
+                    <div class="products_statusBar">
+                      <span>8/10</span>
+                      <div class="bar">
+                        <div class="bar_set"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="products_level">
+                    <div class="products_levelBar"><span>甜蜜</span>
+                      <div class="bar">
+                        <div class="bar_set"></div>
+                      </div>
+                    </div>
+                    <div class="products_levelBar"><span>養生</span>
+                      <div class="bar">
+                        <div class="bar_set"></div>
+                      </div>
+                    </div>
+                    <div class="products_levelBar"><span>鹹派</span>
+                      <div class="bar">
+                        <div class="bar_set"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="products_actionbox">
+                  <div class="products_action">
+                    <p>$ 19999</p>
+                    <p>數量:<input type="number" min="1" value="1"></p>
+                    <p>我要團購</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="products_card">
+              <div class="products_offerLevel">
+                <img src="img/product/BlueCard_Level.png" alt="">
+              </div>
+              <div class="products_detail">
+                <div class="products_P">
+                  <div class="products_Pname">
+                    <p>商品名稱</p>
+                  </div>
+                  <div class="products_Ptag">
+                    <p>客製</p>
+                  </div>
+                </div>
+                <div class="products_content">
+                  <div class="products_img">
+                    <img src="img/product/product.png" alt="">
+                  </div>
+                  <div class="products_information">
+                    <p>成分</p>
+                    <p><span>基底:</span><span>竹炭</span></p>
+                    <p><span>配料:</span><span>蔥花、火腿</span></p>
+                    <p><span>裝飾品:</span><span>眼球、手指餅乾</span></p>
+                  </div>
+                </div>
+                <div class="products_statusbox">
+                  <div class="products_status">
+                    <p>目前人數</p>
+                    <div class="products_statusBar">
+                      <span>8/10</span>
+                      <div class="bar">
+                        <div class="bar_set"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="products_level">
+                    <div class="products_levelBar"><span>甜蜜</span>
+                      <div class="bar">
+                        <div class="bar_set"></div>
+                      </div>
+                    </div>
+                    <div class="products_levelBar"><span>養生</span>
+                      <div class="bar">
+                        <div class="bar_set"></div>
+                      </div>
+                    </div>
+                    <div class="products_levelBar"><span>鹹派</span>
+                      <div class="bar">
+                        <div class="bar_set"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="products_actionbox">
+                  <div class="products_action">
+                    <p>$ 19999</p>
+                    <p>數量:<input type="number" min="1" value="1"></p>
+                    <p>我要團購</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="products_row">
+            <div class="products_card">
+              <div class="products_offerLevel">
+                <img src="img/product/BlueCard_Level.png" alt="">
+              </div>
+              <div class="products_detail">
+                <div class="products_P">
+                  <div class="products_Pname">
+                    <p>商品名稱</p>
+                  </div>
+                  <div class="products_Ptag">
+                    <p>客製</p>
+                  </div>
+                </div>
+                <div class="products_content">
+                  <div class="products_img">
+                    <img src="img/product/product.png" alt="">
+                  </div>
+                  <div class="products_information">
+                    <p>成分</p>
+                    <p><span>基底:</span><span>竹炭</span></p>
+                    <p><span>配料:</span><span>蔥花、火腿</span></p>
+                    <p><span>裝飾品:</span><span>眼球、手指餅乾</span></p>
+                  </div>
+                </div>
+                <div class="products_statusbox">
+                  <div class="products_status">
+                    <p>目前人數</p>
+                    <div class="products_statusBar">
+                      <span>8/10</span>
+                      <div class="bar">
+                        <div class="bar_set"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="products_level">
+                    <div class="products_levelBar"><span>甜蜜</span>
+                      <div class="bar">
+                        <div class="bar_set"></div>
+                      </div>
+                    </div>
+                    <div class="products_levelBar"><span>養生</span>
+                      <div class="bar">
+                        <div class="bar_set"></div>
+                      </div>
+                    </div>
+                    <div class="products_levelBar"><span>鹹派</span>
+                      <div class="bar">
+                        <div class="bar_set"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="products_actionbox">
+                  <div class="products_action">
+                    <p>$ 19999</p>
+                    <p>數量:<input type="number" min="1" value="1"></p>
+                    <p>我要團購</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="products_card">
+              <div class="products_offerLevel">
+                <img src="img/product/BlueCard_Level.png" alt="">
+              </div>
+              <div class="products_detail">
+                <div class="products_P">
+                  <div class="products_Pname">
+                    <p>商品名稱</p>
+                  </div>
+                  <div class="products_Ptag">
+                    <p>客製</p>
+                  </div>
+                </div>
+                <div class="products_content">
+                  <div class="products_img">
+                    <img src="img/product/product.png" alt="">
+                  </div>
+                  <div class="products_information">
+                    <p>成分</p>
+                    <p><span>基底:</span><span>竹炭</span></p>
+                    <p><span>配料:</span><span>蔥花、火腿</span></p>
+                    <p><span>裝飾品:</span><span>眼球、手指餅乾</span></p>
+                  </div>
+                </div>
+                <div class="products_statusbox">
+                  <div class="products_status">
+                    <p>目前人數</p>
+                    <div class="products_statusBar">
+                      <span>8/10</span>
+                      <div class="bar">
+                        <div class="bar_set"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="products_level">
+                    <div class="products_levelBar"><span>甜蜜</span>
+                      <div class="bar">
+                        <div class="bar_set"></div>
+                      </div>
+                    </div>
+                    <div class="products_levelBar"><span>養生</span>
+                      <div class="bar">
+                        <div class="bar_set"></div>
+                      </div>
+                    </div>
+                    <div class="products_levelBar"><span>鹹派</span>
+                      <div class="bar">
+                        <div class="bar_set"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="products_actionbox">
+                  <div class="products_action">
+                    <p>$ 19999</p>
+                    <p>數量:<input type="number" min="1" value="1"></p>
+                    <p>我要團購</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="products_row">
+            <div class="products_card">
+              <div class="products_offerLevel">
+                <img src="img/product/BlueCard_Level.png" alt="">
+              </div>
+              <div class="products_detail">
+                <div class="products_P">
+                  <div class="products_Pname">
+                    <p>商品名稱</p>
+                  </div>
+                  <div class="products_Ptag">
+                    <p>客製</p>
+                  </div>
+                </div>
+                <div class="products_content">
+                  <div class="products_img">
+                    <img src="img/product/product.png" alt="">
+                  </div>
+                  <div class="products_information">
+                    <p>成分</p>
+                    <p><span>基底:</span><span>竹炭</span></p>
+                    <p><span>配料:</span><span>蔥花、火腿</span></p>
+                    <p><span>裝飾品:</span><span>眼球、手指餅乾</span></p>
+                  </div>
+                </div>
+                <div class="products_statusbox">
+                  <div class="products_status">
+                    <p>目前人數</p>
+                    <div class="products_statusBar">
+                      <span>8/10</span>
+                      <div class="bar">
+                        <div class="bar_set"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="products_level">
+                    <div class="products_levelBar"><span>甜蜜</span>
+                      <div class="bar">
+                        <div class="bar_set"></div>
+                      </div>
+                    </div>
+                    <div class="products_levelBar"><span>養生</span>
+                      <div class="bar">
+                        <div class="bar_set"></div>
+                      </div>
+                    </div>
+                    <div class="products_levelBar"><span>鹹派</span>
+                      <div class="bar">
+                        <div class="bar_set"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="products_actionbox">
+                  <div class="products_action">
+                    <p>$ 19999</p>
+                    <p>數量:<input type="number" min="1" value="1"></p>
+                    <p>我要團購</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="products_card">
+              <div class="products_offerLevel">
+                <img src="img/product/BlueCard_Level.png" alt="">
+              </div>
+              <div class="products_detail">
+                <div class="products_P">
+                  <div class="products_Pname">
+                    <p>商品名稱</p>
+                  </div>
+                  <div class="products_Ptag">
+                    <p>客製</p>
+                  </div>
+                </div>
+                <div class="products_content">
+                  <div class="products_img">
+                    <img src="img/product/product.png" alt="">
+                  </div>
+                  <div class="products_information">
+                    <p>成分</p>
+                    <p><span>基底:</span><span>竹炭</span></p>
+                    <p><span>配料:</span><span>蔥花、火腿</span></p>
+                    <p><span>裝飾品:</span><span>眼球、手指餅乾</span></p>
+                  </div>
+                </div>
+                <div class="products_statusbox">
+                  <div class="products_status">
+                    <p>目前人數</p>
+                    <div class="products_statusBar">
+                      <span>8/10</span>
+                      <div class="bar">
+                        <div class="bar_set"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="products_level">
+                    <div class="products_levelBar"><span>甜蜜</span>
+                      <div class="bar">
+                        <div class="bar_set"></div>
+                      </div>
+                    </div>
+                    <div class="products_levelBar"><span>養生</span>
+                      <div class="bar">
+                        <div class="bar_set"></div>
+                      </div>
+                    </div>
+                    <div class="products_levelBar"><span>鹹派</span>
+                      <div class="bar">
+                        <div class="bar_set"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="products_actionbox">
+                  <div class="products_action">
+                    <p>$ 19999</p>
+                    <p>數量:<input type="number" min="1" value="1"></p>
+                    <p>我要團購</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="layout_footer">
+    <div class="container">
+      <div class="layout_footericons">
+        <i class="fab fa-facebook-square"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-line"></i>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/menu.js"></script>
+</body>
+
+</html>
