@@ -1,0 +1,41 @@
+.cust_listBox {
+  border: 1px solid #f00; }
+
+.favor_type {
+  border: 1px solid #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1; }
+
+.favor_title {
+  position: absolute;
+  top: 5%;
+  -webkit-transform: translate(-50%);
+  -ms-transform: translate(-50%);
+  transform: translate(-50%); }
+
+.favor_box {
+  width: 220px;
+  border: 1px solid #888;
+  background-image: url("../img/cust/style.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+  height: 600px; }
+  .favor_box:hover > .mascot {
+    opacity: 1; }
+  .favor_box > .mascot {
+    position: absolute;
+    bottom: 0;
+    right: -10%;
+    width: 80%;
+    -webkit-transform: rotate(10deg);
+    -ms-transform: rotate(10deg);
+    transform: rotate(10deg);
+    opacity: 0; }

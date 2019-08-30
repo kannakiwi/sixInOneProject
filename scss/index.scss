@@ -21,7 +21,7 @@
 @import 'index-product';
 @import 'index-buytoghter';
 @import 'index-car';
-
+@import 'index-one';
 //////////////////////// 團購設定區域//////////////////////////
 //                                                         //
 //                                                         //`
@@ -53,8 +53,20 @@
 @import 'vot';
 @import 'level';
 
-//@import
-//@import
+//////////////////////// 產品內頁設定區域///////////////////////
+//                                                         //
+//                                                         //`
+/////////////////////////////////////////////////////////////
+@import 'product_in';
+
+//////////////////////// 客制設定區域//////////////////////////
+//                                                         //
+//                                                         //`
+/////////////////////////////////////////////////////////////
+@import 'custDacor';
+@import 'custFavor';
+@import 'custMsg';
+@import 'custShared';
 
 img {
   display: block;
@@ -114,5 +126,6 @@ a {
     display: block;
     content: '';
     clear: both;
+    // transform: translateX();
   }
 }

@@ -1,0 +1,99 @@
+.cust_favor {
+  > .container {
+    .wrap {
+      display: flex;
+      justify-content: space-between;
+      @include media(md) {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+    // 右邊區域
+
+    // 左邊區域-favor開頭
+    @at-root .favor {
+      // 全部區域
+      &_type {
+        // border: 1px solid #000;
+        display: flex;
+        flex: 1;
+        justify-content: space-between;
+        @include media(md) {
+          flex: none;
+          width: 95%;
+        }
+        .pie_img {
+          position: absolute;
+          top: 20%;
+          left: 55%;
+          transform: translateX(-50%) scale(1.3);
+          @include media(md) {
+            left: 50%;
+            transform: translateX(-50%) scale(1);
+          }
+        }
+      }
+      // 標題部分
+      &_title {
+        position: absolute;
+        top: 10%;
+        left: 55%;
+        transform: translateX(-50%);
+        @include media(md) {
+          left: 50%;
+        }
+      }
+      //風格字專用
+      &_style {
+        position: absolute;
+        top: 65%;
+        left: 20%;
+        writing-mode: vertical-lr;
+        font-size: 30px;
+        @include media(md) {
+          left: 35%;
+        }
+      }
+      //籤的共用區域
+      &_box {
+        width: 30%;
+        height: 800px;
+        background-image: url('../img/cust/style.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        margin-left: 10px;
+        margin-right: 10px;
+        @include media(md) {
+          display: none;
+          background-size: contain;
+          background-position: center;
+        }
+        &:hover {
+          > .mascot {
+            opacity: 1;
+          }
+        }
+        > .mascot {
+          position: absolute;
+          bottom: 0;
+          right: -10%;
+          width: 80%;
+          transform: rotate(10deg);
+          opacity: 0;
+          @include media(md) {
+            transform: rotate(10deg) scale(0.5);
+            bottom: -150px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media(md) {
+  .box_show {
+    flex: 1;
+    display: block;
+  }
+}
