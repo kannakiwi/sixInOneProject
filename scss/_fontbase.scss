@@ -54,6 +54,7 @@ $fz_md_size: (
 //一般設定(md手機)(lg桌機)                                    //
 /////////////////////////////////////////////////////////////
 body {
+  position: relative;
   // overflow: hidden;
   h2 {
     @include media(md) {
