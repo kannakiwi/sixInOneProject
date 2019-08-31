@@ -2,98 +2,113 @@
   > .container {
     .wrap {
       display: flex;
-      justify-content: space-between;
-      @include media(md) {
-        flex-wrap: wrap;
-        justify-content: center;
+      flex-wrap: wrap;
+      justify-content: center;
+      @include media(lg) {
+        flex-wrap: nowrap;
       }
-    }
-    // 右邊區域
-
-    // 左邊區域-favor開頭
-    @at-root .favor {
-      // 全部區域
-      &_type {
-        // border: 1px solid #000;
-        display: flex;
-        flex: 1;
-        justify-content: space-between;
-        @include media(md) {
-          flex: none;
+      > .cust_listBox {
+        width: 95%;
+        @include media(lg) {
+          width: 30%;
+        }
+      }
+      //右邊的區域
+      .favor {
+        &_type {
           width: 95%;
         }
-        .pie_img {
-          position: absolute;
-          top: 20%;
-          left: 55%;
-          transform: translateX(-50%) scale(1.3);
-          @include media(md) {
-            left: 50%;
-            transform: translateX(-50%) scale(1);
+        //上面的南瓜雲跟進度條
+        &_level {
+          @include media(lg) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          &_title {
+            background-image: url('../img/cust/pumpkin.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            text-align: center;
+            line-height: 350px;
+            height: 300px;
+
+            @include media(lg) {
+              flex: 1;
+            }
+          }
+          &_show {
+            @include media(lg) {
+              flex: 1;
+            }
+            .cust_bar {
+              width: 80%;
+            }
           }
         }
-      }
-      // 標題部分
-      &_title {
-        position: absolute;
-        top: 10%;
-        left: 55%;
-        transform: translateX(-50%);
-        @include media(md) {
-          left: 50%;
+        &_totalbox {
+          @include media(lg) {
+            display: flex;
+            justify-content: space-around;
+          }
         }
-      }
-      //風格字專用
-      &_style {
-        position: absolute;
-        top: 65%;
-        left: 20%;
-        writing-mode: vertical-lr;
-        font-size: 30px;
-        @include media(md) {
-          left: 35%;
-        }
-      }
-      //籤的共用區域
-      &_box {
-        width: 30%;
-        height: 800px;
-        background-image: url('../img/cust/style.png');
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: relative;
-        margin-left: 10px;
-        margin-right: 10px;
-        @include media(md) {
-          display: none;
-          background-size: contain;
+
+        //吸血鬼的票卷地方
+        &_box {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          background-image: url('../img/cust/style.png');
+          background-repeat: no-repeat;
           background-position: center;
-        }
-        &:hover {
+          height: 600px;
+          position: relative;
+          > .pie_img {
+            position: absolute;
+            top: 25%;
+          }
+          > .favor_style {
+            position: absolute;
+            top: 58%;
+            left: 42%;
+            transform: translateX(-42%);
+            writing-mode: vertical-lr;
+            font-size: map-get($fz_size, h2);
+          }
+          > .favor_title {
+            position: absolute;
+            top: 12%;
+          }
+          &_close {
+            @include media(md) {
+              display: none;
+            }
+          }
+          @include media(lg) {
+            flex: 1;
+          }
           > .mascot {
-            opacity: 1;
+            opacity: 0;
+            position: absolute;
+            bottom: 0;
+            transform: rotate(10deg) scale(0.7) translateX(70%) translateY(10%);
+            transition: opacity 0.3s linear;
+            @include media(md) {
+              display: block;
+              opacity: 1;
+            }
           }
-        }
-        > .mascot {
-          position: absolute;
-          bottom: 0;
-          right: -10%;
-          width: 80%;
-          transform: rotate(10deg);
-          opacity: 0;
-          @include media(md) {
-            transform: rotate(10deg) scale(0.5);
-            bottom: -150px;
+          &:hover {
+            > .mascot {
+              transform: rotate(10deg) scale(0.7) translateX(70%) translateY(10%);
+              opacity: 1;
+            }
           }
+
+          // flex: 1;
         }
       }
     }
-  }
-}
-
-@include media(md) {
-  .box_show {
-    flex: 1;
-    display: block;
   }
 }
