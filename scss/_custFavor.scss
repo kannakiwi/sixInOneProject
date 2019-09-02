@@ -1,5 +1,6 @@
 .cust_favor {
   > .container {
+    overflow: hidden;
     .wrap {
       display: flex;
       flex-wrap: wrap;
@@ -53,7 +54,6 @@
             justify-content: space-around;
           }
         }
-
         //吸血鬼的票卷地方
         &_box {
           display: flex;

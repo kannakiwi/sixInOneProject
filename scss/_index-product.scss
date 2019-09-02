@@ -31,6 +31,8 @@
         > .card_titleshow {
           background-image: none;
           position: relative;
+          // border: 1px solid #000;
+
           > h3 {
             margin: 0 auto;
             width: 50%;
@@ -50,5 +52,20 @@
         }
       }
     }
+  }
+}
+.index_showtitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h3 {
+    background-image: url('../img/index/brush.png');
+    background-size: 150%;
+
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-position: center;
   }
 }

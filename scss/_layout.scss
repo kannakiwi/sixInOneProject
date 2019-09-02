@@ -2,10 +2,11 @@
   > .container {
   }
   &_header {
-    background-image: url('../img/layout/nav.png');
+    background-image: url('../img/layout/nav-1.png');
     background-size: 100%;
     background-repeat: no-repeat;
     overflow: hidden;
+    padding-bottom: 30px;
     @include media(md) {
       background-size: 250%;
     }
@@ -13,7 +14,7 @@
       padding-bottom: 20px;
       @include media(md) {
         padding-top: 20px;
-        padding-bottom: 50px;
+        padding-bottom: 55px;
       }
     }
   }
@@ -42,7 +43,7 @@
       text-align: center;
       > .logo_link {
         display: inline-block;
-        background-image: url('../img/layout/logo.svg');
+        background-image: url('../img/layout/logo_白邊.svg');
         //少一個png
         background-size: contain;
         background-position: center;
@@ -81,8 +82,19 @@
     }
     > .layout_link {
       display: inline-block;
-      padding: 20px;
-      color: rgba(#ffffff, 0.7);
+      padding-top: 30px;
+      padding-bottom: 30px;
+      padding-right: 30px;
+      padding-left: 30px;
+      color: map-get($color, title_color);
+      background-image: url('../img/layout/nav-ghost.png');
+      background-size: 60%;
+      background-position: -10%;
+      background-repeat: no-repeat;
+      @include media(md) {
+        background-image: none;
+        color: rgba(#ffffff, 0.7);
+      }
     }
   }
   &_menubtn {
@@ -172,6 +184,69 @@
         left: 50%;
         top: 70%;
         transform: translateX(-50%) translateY(-50%);
+      }
+    }
+  }
+}
+
+// ----------layout lv2----------
+.container-out {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  &::after {
+    display: block;
+    content: '';
+    clear: both;
+    // transform: translateX();
+  }
+  .layout_newtitle {
+    padding-top: 220px;
+    padding-bottom: 120px;
+    background-image: url('../img/layout/title.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    @include media(md) {
+      background-size: 95%;
+    }
+    .layout_nesh2 {
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: map-get($color, title_color);
+    }
+  }
+}
+
+// ----------layout lv2----------
+.layout_ghostvot {
+  padding-top: 50px;
+  > .container {
+    display: flex;
+    justify-content: space-between;
+    @at-root .layout_ghostshow {
+      position: relative;
+      width: 28%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      > img {
+        width: 100%;
+      }
+      > .ghostvot {
+        width: 30%;
+      }
+      > .show_pic {
+        width: 70%;
+      }
+      > p {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%);
       }
     }
   }

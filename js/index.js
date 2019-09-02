@@ -13,11 +13,13 @@
       rotation: -10,
     })
     .to('.main_ghost_two', 1, {
-      x: 500,
+      x: 430,
+      y: 30,
       opacity: 1,
     })
     .to('.main_ghost_three', 1, {
-      x: -500,
+      x: -540,
+      y: -10,
       opacity: 1,
     });
 })();

@@ -4,14 +4,14 @@
     @at-root .main_pie {
       display: flex;
       justify-content: center;
-
       margin: 0 auto;
       transform: scale(1.4);
       position: relative;
       top: -600px;
       opacity: 0;
       @include media(md) {
-        transform: scale(1.1);
+        transform: scale(0.9);
+        top: -600px;
       }
     }
     @at-root .main_groupghost {
@@ -24,16 +24,22 @@
         top: 2%;
         transform: rotate(-20deg);
         @include media(md) {
-          transform: scale(0.7) rotate(-20deg);
+          transform: scale(0.7) rotate(0deg);
           left: 0%;
-          top: 15%;
+          top: -8%;
         }
       }
       > .main_ghost_two {
         position: absolute;
-        right: 40%;
-        transform: translateY(25%) rotate(30deg);
+        right: 35%;
+        transform: rotate(30deg);
         opacity: 0;
+        z-index: 2;
+        @include media(md) {
+          transform: scale(0.7);
+          top: -10%;
+          left: -80%;
+        }
       }
 
       > .main_ghost_three {
@@ -41,7 +47,8 @@
         left: 550px;
         opacity: 0;
         @include media(md) {
-          transform: translateY(18%) scale(0.7);
+          z-index: 2;
+          transform: scale(0.6) translateY(60%);
         }
       }
     }
